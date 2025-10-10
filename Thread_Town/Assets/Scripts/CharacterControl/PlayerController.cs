@@ -59,6 +59,17 @@ public class PlayerController : MonoBehaviour
     {
         // 鼠标控制已经通过 Cinemachine 自动处理
         // 这里我们基于相机朝向计算移动方向
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
 
     void HandleMovement()
@@ -121,8 +132,6 @@ public class PlayerController : MonoBehaviour
                 currentPlatform = hit.collider.transform;
                 platformVelocity = Vector3.zero;
             }
-
-            animator.SetBool("isJump", false);
         }
         else
         {

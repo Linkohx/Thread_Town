@@ -21,7 +21,7 @@ public class DialogueTrigger : MonoBehaviour
 
     protected bool isCollisionPlayer = false;
 
-    protected const string dialogueTip = "Press the spacebar to initiate a conversation";
+    protected const string dialogueTip = "Press the G to initiate a conversation";
 
     protected void OnTriggerEnter(Collider other)
     {

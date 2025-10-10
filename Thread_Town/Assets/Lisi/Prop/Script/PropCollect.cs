@@ -63,6 +63,7 @@ public class PropCollect : MonoBehaviour
             {
                 collectProp.Collect();
                 tipPanel.HideTip();
+                collectProp = null;
             }
         }
     }
