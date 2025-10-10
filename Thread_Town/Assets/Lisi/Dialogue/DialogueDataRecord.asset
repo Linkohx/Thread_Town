@@ -41,3 +41,86 @@ MonoBehaviour:
     - name: NPC
       content: "\u53EF\u4EE5\u901A\u8FC7\u9B54\u6CD5\u5B8C\u6210\u5404\u79CD\u5404\u6837\u7684\u4E8B\u60C5\uFF01"
       character: {fileID: 0}
+  - id: 1003
+    startActionEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endActionEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    datas:
+    - name: "\u58EB\u5175"
+      content: "\u54CE\u5440\uFF01\u52A8\u529B\u4E0D\u8DB3\u4E86\u3002"
+      character: {fileID: 0}
+    - name: "\u6211"
+      content: "\u6211\u5E94\u8BE5\u600E\u4E48\u5E2E\u52A9\u4F60\u5462\uFF1F"
+      character: {fileID: 0}
+    - name: "\u58EB\u5175"
+      content: "\u80FD\u5E2E\u6211\u627E\u627E\u6211\u7684\u53D1\u6761\u5417\uFF1F"
+      character: {fileID: 0}
+    - name: "\u58EB\u5175"
+      content: "\u9700\u8981\u5B83\u7ED9\u6211\u62E7\u62E7\u589E\u52A0\u52A8\u529B\u3002"
+      character: {fileID: 0}
+    - name: "\u6211"
+      content: "\u597D\uFF0C\u6211\u5E2E\u4F60\u627E\uFF01"
+      character: {fileID: 0}
+  - id: 1004
+    startActionEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endActionEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    datas:
+    - name: "\u79EF\u6728\u4EBA"
+      content: "\uFF08\u53F9\u6C14\uFF09\u600E\u4E48\u529E\u597D\u5440\u3002"
+      character: {fileID: 0}
+    - name: "\u6211"
+      content: "\u600E\u4E48\u4E86\uFF1F"
+      character: {fileID: 0}
+    - name: "\u79EF\u6728\u4EBA"
+      content: "\u6211\u7684\u623F\u5B50\u7F3A\u5C11\u4E86\u4E09\u4E2A\u91CD\u8981\u7684\u79EF\u6728\uFF0C\u6240\u4EE5\u6CA1\u529E\u6CD5\u5EFA\u597D\u3002"
+      character: {fileID: 0}
+    - name: "\u6211"
+      content: "\u6CA1\u4E8B\uFF0C\u6211\u4F1A\u5E2E\u4F60\u627E\u5230\u7684\uFF01"
+      character: {fileID: 0}
+  - id: 1005
+    startActionEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endActionEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    datas:
+    - name: "\u62FC\u56FE\u9E1F"
+      content: "\u600E\u4E48\u5C31\u6211\u98DE\u5F97\u4E0D\u5E73\u7A33\uFF01"
+      character: {fileID: 0}
+    - name: "\u6211"
+      content: "\u96BE\u9053\u662F\u56E0\u4E3A\u7F3A\u5C11\u4E86\u5C3E\u5DF4\u4FDD\u6301\u5E73\u8861\u5417\uFF1F"
+      character: {fileID: 0}
+    - name: "\u62FC\u56FE\u9E1F"
+      content: "\u6211\u7684\u5C3E\u5DF4\u4E0D\u5C0F\u5FC3\u4E22\u5931\u4E86\uFF0C\u90A3\u4F60\u80FD\u5E2E\u6211\u627E\u4E00\u4E0B\u5417\uFF1F"
+      character: {fileID: 0}
+    - name: "\u6211"
+      content: "\u597D\uFF0C\u6211\u4F1A\u5E2E\u4F60\u627E\u5230\u7684\uFF01"
+      character: {fileID: 0}
+  - id: 1006
+    startActionEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endActionEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    datas:
+    - name: "\u718A"
+      content: "\u6211\u7684\u773C\u775B~"
+      character: {fileID: 0}
+    - name: "\u6211"
+      content: "\u4F60\u7684\u773C\u775B\u600E\u4E48\u4E86\uFF1F"
+      character: {fileID: 0}
+    - name: "\u718A"
+      content: "\u6211\u7684\u773C\u775B\u4E0D\u5C0F\u5FC3\u5F04\u574F\u4E86"
+      character: {fileID: 0}
+    - name: "\u6211"
+      content: "\u90A3\u6211\u5E2E\u4F60\u627E\u627E\u770B\u6709\u6CA1\u6709\u53EF\u4EE5\u66FF\u4EE3\u7684\uFF01"
+      character: {fileID: 0}

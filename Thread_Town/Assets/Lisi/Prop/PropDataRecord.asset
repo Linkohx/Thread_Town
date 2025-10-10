@@ -15,11 +15,21 @@ MonoBehaviour:
   propDatas:
   - id: 1001
     icon: {fileID: 0}
-    name: "\u9053\u51771"
-    description: "\u9053\u5177\u63CF\u8FF0"
-    count: 1
+    name: "\u53D1\u6761"
+    description: "\u53D1\u6761\u63CF\u8FF0"
+    count: 0
   - id: 1002
     icon: {fileID: 0}
-    name: "\u9053\u51772"
-    description: "\u9053\u5177\u63CF\u8FF0"
-    count: 10
+    name: "\u79EF\u6728"
+    description: "\u79EF\u6728\u63CF\u8FF0"
+    count: 0
+  - id: 1003
+    icon: {fileID: 0}
+    name: "\u5C3E\u5DF4"
+    description: "\u5C3E\u5DF4\u63CF\u8FF0"
+    count: 0
+  - id: 1004
+    icon: {fileID: 0}
+    name: "\u7EBD\u6263\u773C\u775B"
+    description: "\u7EBD\u6263\u773C\u775B\u63CF\u8FF0"
+    count: 0

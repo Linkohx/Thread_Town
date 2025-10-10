@@ -1,4 +1,4 @@
-using Cinemachine;
+ï»¿using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,21 +22,25 @@ public class PlayerController : MonoBehaviour
     private Vector3 platformVelocity;
     private Transform currentPlatform;
 
+    private Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         freeLookCamera = FindObjectOfType<CinemachineFreeLook>();
         cameraTransform = Camera.main.transform;
 
-        // ÉèÖÃ Rigidbody
+        // è®¾ç½® Rigidbody
         rb.freezeRotation = true;
 
-        // ÉèÖÃ Cinemachine ¸úËæÄ¿±ê
+        // è®¾ç½® Cinemachine è·Ÿéšç›®æ ‡
         if (freeLookCamera != null)
         {
             freeLookCamera.Follow = transform;
             freeLookCamera.LookAt = transform;
         }
+
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -53,8 +57,8 @@ public class PlayerController : MonoBehaviour
 
     void HandleMouseLook()
     {
-        // Êó±ê¿ØÖÆÒÑ¾­Í¨¹ı Cinemachine ×Ô¶¯´¦Àí
-        // ÕâÀïÎÒÃÇ»ùÓÚÏà»ú³¯Ïò¼ÆËãÒÆ¶¯·½Ïò
+        // é¼ æ ‡æ§åˆ¶å·²ç»é€šè¿‡ Cinemachine è‡ªåŠ¨å¤„ç†
+        // è¿™é‡Œæˆ‘ä»¬åŸºäºç›¸æœºæœå‘è®¡ç®—ç§»åŠ¨æ–¹å‘
     }
 
     void HandleMovement()
@@ -62,7 +66,7 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        // »ùÓÚÏà»ú³¯Ïò¼ÆËãÒÆ¶¯·½Ïò
+        // åŸºäºç›¸æœºæœå‘è®¡ç®—ç§»åŠ¨æ–¹å‘
         Vector3 cameraForward = cameraTransform.forward;
         Vector3 cameraRight = cameraTransform.right;
 
@@ -73,13 +77,13 @@ public class PlayerController : MonoBehaviour
 
         Vector3 moveDirection = (cameraForward * vertical + cameraRight * horizontal).normalized;
 
-        // Ó¦ÓÃÒÆ¶¯ËÙ¶È
+        // åº”ç”¨ç§»åŠ¨é€Ÿåº¦
         Vector3 targetVelocity = moveDirection * moveSpeed;
 
-        // ±£³Ö Y ÖáËÙ¶È²»±ä
+        // ä¿æŒ Y è½´é€Ÿåº¦ä¸å˜
         targetVelocity.y = rb.velocity.y;
 
-        // Èç¹ûÕ¾ÔÚÒÆ¶¯Æ½Ì¨ÉÏ£¬Ìí¼ÓÆ½Ì¨ËÙ¶È
+        // å¦‚æœç«™åœ¨ç§»åŠ¨å¹³å°ä¸Šï¼Œæ·»åŠ å¹³å°é€Ÿåº¦
         if (currentPlatform != null)
         {
             targetVelocity += platformVelocity;
@@ -87,7 +91,7 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = targetVelocity;
 
-        // ÈÃ½ÇÉ«³¯ÏòÒÆ¶¯·½Ïò£¨½öÔÚÒÆ¶¯Ê±£©
+        // è®©è§’è‰²æœå‘ç§»åŠ¨æ–¹å‘ï¼ˆä»…åœ¨ç§»åŠ¨æ—¶ï¼‰
         if (moveDirection.magnitude > 0.1f)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
@@ -100,6 +104,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+            animator.SetBool("isJump", true);
         }
     }
 
@@ -108,7 +113,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         isGrounded = Physics.Raycast(transform.position, Vector3.down, out hit, groundCheckDistance, groundLayer);
 
-        // ¸üĞÂµ±Ç°Æ½Ì¨ĞÅÏ¢
+        // æ›´æ–°å½“å‰å¹³å°ä¿¡æ¯
         if (isGrounded && hit.collider.CompareTag("MovingPlatform"))
         {
             if (currentPlatform != hit.collider.transform)
@@ -116,6 +121,8 @@ public class PlayerController : MonoBehaviour
                 currentPlatform = hit.collider.transform;
                 platformVelocity = Vector3.zero;
             }
+
+            animator.SetBool("isJump", false);
         }
         else
         {
@@ -125,7 +132,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
-        // ¼ì²âÊÇ·ñÕ¾ÔÚÒÆ¶¯Æ½Ì¨ÉÏ²¢»ñÈ¡Æ½Ì¨ËÙ¶È
+        // æ£€æµ‹æ˜¯å¦ç«™åœ¨ç§»åŠ¨å¹³å°ä¸Šå¹¶è·å–å¹³å°é€Ÿåº¦
         if (collision.collider.CompareTag("MovingPlatform") && isGrounded)
         {
             Rigidbody platformRb = collision.collider.GetComponent<Rigidbody>();
@@ -145,7 +152,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // ¿ÉÊÓ»¯µØÃæ¼ì²â
+    // å¯è§†åŒ–åœ°é¢æ£€æµ‹
     void OnDrawGizmosSelected()
     {
         Gizmos.color = isGrounded ? Color.green : Color.red;
