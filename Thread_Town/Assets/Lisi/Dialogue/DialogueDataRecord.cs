@@ -30,6 +30,8 @@ public class BaseDialogue
 [Serializable]
 public class DialogueData
 {
+    [Header("剧情标题")]
+    public string title;
     [Header("剧情ID（要求唯一）")]
     public int id;
     [Header("剧情开始时事件")]
