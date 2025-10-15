@@ -49,8 +49,12 @@ public class NPCController : MonoBehaviour
     {
         if (npcState)
         {
-            unfinishedModel.SetActive(false);
-            finishedModel.SetActive(true);
+            TransitionPanel.Instance.transitionEvent.AddListener(() =>
+            {
+                unfinishedModel.SetActive(false);
+                finishedModel.SetActive(true);
+            });
+            TransitionPanel.Instance.Show();
         }
         else
         {

@@ -46,6 +46,7 @@ public class PropCollect : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         Prop prop = other.GetComponent<Prop>();
+        if (collectProp == null) { return; }
         if (prop != null && prop.GetInstanceID() == collectProp.GetInstanceID())
         {
             tipPanel.HideTip();

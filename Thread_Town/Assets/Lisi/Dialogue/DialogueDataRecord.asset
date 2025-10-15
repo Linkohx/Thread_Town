@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: DialogueDataRecord
   m_EditorClassIdentifier: 
   dialogueDatas:
-  - id: 1001
+  - title: "\u6D63\u718A\uFF08\u672A\u4EA4\u4ED8\uFF09"
+    id: 1001
     startActionEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -21,13 +22,22 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     datas:
-    - name: NPC
-      content: "\u6B22\u8FCE\u6765\u5230\u8FD9\u4E2A\u65B0\u4E16\u754C\uFF01"
+    - name: Raccoon
+      content: 'Hi, Doll! How are you today? '
       character: {fileID: 0}
-    - name: "\u6211"
-      content: "\u96BE\u9053\u6211\u7A7F\u8D8A\u4E86\uFF1F\uFF1F\uFF1F"
+    - name: Raccoon
+      content: I heard you just arrived in our little toy town.
       character: {fileID: 0}
-  - id: 1002
+    - name: Raccoon
+      content: "This place may look peaceful, but a few of our friends are having
+        a bit of trouble lately\u2026"
+      character: {fileID: 0}
+    - name: Raccoon
+      content: "I was hoping someone kind and clever\u2014like you\u2014might lend
+        a paw."
+      character: {fileID: 0}
+  - title: "\u6D63\u718A\uFF08\u5DF2\u4EA4\u4ED8\uFF09"
+    id: 1002
     startActionEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -35,13 +45,17 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     datas:
-    - name: NPC
-      content: "\u8FD9\u662F\u4E00\u4E2A\u9B54\u6CD5\u7684\u4E16\u754C\uFF01"
+    - name: Raccoon
+      content: "Everyone\u2019s feeling better thanks to you. "
       character: {fileID: 0}
-    - name: NPC
-      content: "\u53EF\u4EE5\u901A\u8FC7\u9B54\u6CD5\u5B8C\u6210\u5404\u79CD\u5404\u6837\u7684\u4E8B\u60C5\uFF01"
+    - name: Raccoon
+      content: You really brought the town back to life, Doll.
       character: {fileID: 0}
-  - id: 1003
+    - name: Raccoon
+      content: This place is lucky to have someone like you around.
+      character: {fileID: 0}
+  - title: "\u73A9\u5177\u718A\uFF08\u672A\u4EA4\u4ED8\uFF09"
+    id: 1003
     startActionEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -49,22 +63,24 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     datas:
-    - name: "\u58EB\u5175"
-      content: "\u54CE\u5440\uFF01\u52A8\u529B\u4E0D\u8DB3\u4E86\u3002"
+    - name: Plush Bear
+      content: "Hi, Doll! I heard from Grandpa Raccoon that you\u2019re helping out
+        around town."
       character: {fileID: 0}
-    - name: "\u6211"
-      content: "\u6211\u5E94\u8BE5\u600E\u4E48\u5E2E\u52A9\u4F60\u5462\uFF1F"
+    - name: Plush Bear
+      content: "That\u2019s really kind of you."
       character: {fileID: 0}
-    - name: "\u58EB\u5175"
-      content: "\u80FD\u5E2E\u6211\u627E\u627E\u6211\u7684\u53D1\u6761\u5417\uFF1F"
+    - name: Plush Bear
+      content: "I\u2019ve actually been having a bit of trouble myself\u2026 "
       character: {fileID: 0}
-    - name: "\u58EB\u5175"
-      content: "\u9700\u8981\u5B83\u7ED9\u6211\u62E7\u62E7\u589E\u52A0\u52A8\u529B\u3002"
+    - name: Plush Bear
+      content: One of my button eyes went missing, and I feel kind of lopsided.
       character: {fileID: 0}
-    - name: "\u6211"
-      content: "\u597D\uFF0C\u6211\u5E2E\u4F60\u627E\uFF01"
+    - name: Plush Bear
+      content: If you happen to see it, would you bring it back to me?
       character: {fileID: 0}
-  - id: 1004
+  - title: "\u73A9\u5177\u718A\uFF08\u5DF2\u4EA4\u4ED8\uFF09"
+    id: 1004
     startActionEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -72,19 +88,23 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     datas:
-    - name: "\u79EF\u6728\u4EBA"
-      content: "\uFF08\u53F9\u6C14\uFF09\u600E\u4E48\u529E\u597D\u5440\u3002"
+    - name: Plush Bear
+      content: "That\u2019s it \u2014 my button eye! "
       character: {fileID: 0}
-    - name: "\u6211"
-      content: "\u600E\u4E48\u4E86\uFF1F"
+    - name: Plush Bear
+      content: 'Thank you so much, Doll. '
       character: {fileID: 0}
-    - name: "\u79EF\u6728\u4EBA"
-      content: "\u6211\u7684\u623F\u5B50\u7F3A\u5C11\u4E86\u4E09\u4E2A\u91CD\u8981\u7684\u79EF\u6728\uFF0C\u6240\u4EE5\u6CA1\u529E\u6CD5\u5EFA\u597D\u3002"
+    - name: Plush Bear
+      content: Everything looks clear again!
       character: {fileID: 0}
-    - name: "\u6211"
-      content: "\u6CA1\u4E8B\uFF0C\u6211\u4F1A\u5E2E\u4F60\u627E\u5230\u7684\uFF01"
+    - name: Plush Bear
+      content: 'You really are as thoughtful as Grandpa Raccoon said. '
       character: {fileID: 0}
-  - id: 1005
+    - name: Plush Bear
+      content: "I\u2019ll be sure to tell him how much you helped me."
+      character: {fileID: 0}
+  - title: "\u79EF\u6728\u4EBA\uFF08\u672A\u4EA4\u4ED8\uFF09"
+    id: 1005
     startActionEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -92,19 +112,24 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     datas:
-    - name: "\u62FC\u56FE\u9E1F"
-      content: "\u600E\u4E48\u5C31\u6211\u98DE\u5F97\u4E0D\u5E73\u7A33\uFF01"
+    - name: Block Man
+      content: Hey there, Doll!
       character: {fileID: 0}
-    - name: "\u6211"
-      content: "\u96BE\u9053\u662F\u56E0\u4E3A\u7F3A\u5C11\u4E86\u5C3E\u5DF4\u4FDD\u6301\u5E73\u8861\u5417\uFF1F"
+    - name: Block Man
+      content: "So you\u2019re the one Grandpa Raccoon was talking about \u2014 the
+        helper with the gentle smile!"
       character: {fileID: 0}
-    - name: "\u62FC\u56FE\u9E1F"
-      content: "\u6211\u7684\u5C3E\u5DF4\u4E0D\u5C0F\u5FC3\u4E22\u5931\u4E86\uFF0C\u90A3\u4F60\u80FD\u5E2E\u6211\u627E\u4E00\u4E0B\u5417\uFF1F"
+    - name: Block Man
+      content: "Well\u2026 my house kind of fell apart this morning. "
       character: {fileID: 0}
-    - name: "\u6211"
-      content: "\u597D\uFF0C\u6211\u4F1A\u5E2E\u4F60\u627E\u5230\u7684\uFF01"
+    - name: Block Man
+      content: I need three blocks to build it back the way it was.
       character: {fileID: 0}
-  - id: 1006
+    - name: Block Man
+      content: If you find any blocks out there, could you bring them here?
+      character: {fileID: 0}
+  - title: "\u79EF\u6728\u4EBA\uFF08\u5DF2\u4EA4\u4ED8\uFF09"
+    id: 1006
     startActionEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -112,19 +137,23 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     datas:
-    - name: "\u718A"
-      content: "\u6211\u7684\u773C\u775B~"
+    - name: Block Man
+      content: "All three blocks \u2014 just like that! You really found them all!"
       character: {fileID: 0}
-    - name: "\u6211"
-      content: "\u4F60\u7684\u773C\u775B\u600E\u4E48\u4E86\uFF1F"
+    - name: Block Man
+      content: My house looks even better than before.
       character: {fileID: 0}
-    - name: "\u718A"
-      content: "\u6211\u7684\u773C\u775B\u4E0D\u5C0F\u5FC3\u5F04\u574F\u4E86"
+    - name: Block Man
+      content: "Maybe I\u2019ll reinforce it this time, ha!"
       character: {fileID: 0}
-    - name: "\u6211"
-      content: "\u90A3\u6211\u5E2E\u4F60\u627E\u627E\u770B\u6709\u6CA1\u6709\u53EF\u4EE5\u66FF\u4EE3\u7684\uFF01"
+    - name: Block Man
+      content: Thanks, Doll.
       character: {fileID: 0}
-  - id: 1007
+    - name: Block Man
+      content: Grandpa Raccoon is going to be thrilled to see it standing again.
+      character: {fileID: 0}
+  - title: "\u5343\u7EB8\u9E64\uFF08\u672A\u4EA4\u4ED8\uFF09"
+    id: 1007
     startActionEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -132,10 +161,28 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     datas:
-    - name: "\u7CFB\u7EDF\u63D0\u793A"
-      content: "\u606D\u559C\u4F60\u5B8C\u6210\u4E86\u4EFB\u52A1\uFF01"
+    - name: Puzzle Bird
+      content: Hello, Doll.
       character: {fileID: 0}
-  - id: 1008
+    - name: Puzzle Bird
+      content: 'Grandpa Raccoon mentioned you might stop by. '
+      character: {fileID: 0}
+    - name: Puzzle Bird
+      content: "He said you're helping everyone get back on their feet \u2014 or
+        wings, in my case."
+      character: {fileID: 0}
+    - name: Puzzle Bird
+      content: 'I lost my tail piece in a clumsy landing. '
+      character: {fileID: 0}
+    - name: Puzzle Bird
+      content: Without it, I can't fly properly.
+      character: {fileID: 0}
+    - name: Puzzle Bird
+      content: If you see a puzzle-shaped tail piece, would you mind returning it
+        to me?
+      character: {fileID: 0}
+  - title: "\u5343\u7EB8\u9E64\uFF08\u5DF2\u4EA4\u4ED8\uFF09"
+    id: 1008
     startActionEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -143,16 +190,21 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     datas:
-    - name: "\u6751\u957F"
-      content: "\u6211\u4EEC\u6751\u5B50\u6709\u5F88\u591A\u9700\u8981\u5E2E\u52A9\u7684\u6751\u6C11\uFF01"
+    - name: Puzzle Bird
+      content: "Oh! That\u2019s my missing tail piece \u2014 it fits perfectly!"
       character: {fileID: 0}
-    - name: "\u6751\u957F"
-      content: "\u6211\u5E74\u7EAA\u5927\u4E86\uFF0C\u8BF7\u4F60\u5E2E\u6211\u5B8C\u6210\u4ED6\u4EEC\u7684\u613F\u671B\u3002"
+    - name: Puzzle Bird
+      content: "Thank you, Doll. I haven\u2019t flown this smoothly in days."
       character: {fileID: 0}
-    - name: "\u6751\u957F"
-      content: "\u8C22\u8C22\u4F60\uFF01"
+    - name: Puzzle Bird
+      content: "Next time you look up, I\u2019ll be waving from the sky! "
       character: {fileID: 0}
-  - id: 1009
+    - name: Puzzle Bird
+      content: "And I\u2019ll definitely tell Grandpa Raccoon how amazing you\u2019ve
+        been."
+      character: {fileID: 0}
+  - title: "\u58EB\u5175\uFF08\u672A\u4EA4\u4ED8\uFF09"
+    id: 1009
     startActionEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -160,6 +212,44 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     datas:
-    - name: "\u6751\u957F"
-      content: "\u8C22\u8C22\u4F60\u5E2E\u6211\u5B8C\u6210\u4E86\u4ED6\u4EEC\u7684\u5FC3\u613F\uFF01"
+    - name: Soldier
+      content: 'At ease, Doll. '
+      character: {fileID: 0}
+    - name: Soldier
+      content: "Word travels fast \u2014 even to an old toy like me."
+      character: {fileID: 0}
+    - name: Soldier
+      content: " I hear you\u2019re helping Grandpa Raccoon fix up our town."
+      character: {fileID: 0}
+    - name: Soldier
+      content: "I lost my wind-up key not long ago\u2026 and without it, I\u2019ve
+        been stuck like a tin can in the mud."
+      character: {fileID: 0}
+    - name: Soldier
+      content: "If you see a small key lying around, I\u2019d be honored if you\u2019d
+        return it."
+      character: {fileID: 0}
+  - title: "\u58EB\u5175\uFF08\u5DF2\u4EA4\u4ED8\uFF09"
+    id: 1010
+    startActionEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    endActionEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    datas:
+    - name: Soldier
+      content: "My wind-up key\u2026 you\u2019ve recovered it."
+      character: {fileID: 0}
+    - name: Soldier
+      content: Outstanding work, Doll.
+      character: {fileID: 0}
+    - name: Soldier
+      content: "I can finally stand tall again \u2014 straight and proud."
+      character: {fileID: 0}
+    - name: Soldier
+      content: "\u201CYou\u2019ve done a great service to this town."
+      character: {fileID: 0}
+    - name: Soldier
+      content: Grandpa Raccoon was right about you.
       character: {fileID: 0}
