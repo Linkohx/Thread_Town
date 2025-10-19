@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public SettingPanel settingPanel;
+
     private void Awake()
     {
         GameData.InitData();
@@ -14,6 +16,10 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Delete))
         {
             GameData.Delete();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            settingPanel.gameObject.SetActive(true);
         }
     }
 }

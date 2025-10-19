@@ -26,4 +26,9 @@ public class SettingPanel : MonoBehaviour
     {
         musicAudioSource.volume = value;
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
