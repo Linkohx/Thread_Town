@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer = 1;
     public float groundCheckDistance = 0.1f;
 
+    public AudioSource runSound;
+    public AudioSource jumpSound;
+
     private Rigidbody rb;
     private CinemachineFreeLook freeLookCamera;
     private Transform cameraTransform;
@@ -103,15 +106,20 @@ public class PlayerController : MonoBehaviour
         rb.velocity = targetVelocity;
 
         // 让角色朝向移动方向（仅在移动时）
-        if (moveDirection.magnitude > 0.1f)
+        if (moveDirection.magnitude > 0.1f && isGrounded)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.fixedDeltaTime * 10f);
             animator.SetBool("isRun", true);
+            if (!runSound.isPlaying)
+            {
+                runSound.Play();
+            }
         }
         else
         {
             animator.SetBool("isRun", false);
+            runSound.Stop();
         }
     }
 
@@ -121,6 +129,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
             animator.SetBool("isJump", true);
+            jumpSound.Play();
         }
     }
 

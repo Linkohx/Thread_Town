@@ -7,6 +7,7 @@ public class BouncyMushroom : MonoBehaviour
 {
     public float bounceHeight = 8f;  // 目标弹跳高度（米）
     public bool onlyWhenFalling = true; // 只在玩家向下时触发
+    public AudioSource bounceSound;
 
     void OnTriggerStay(Collider other)
     {
@@ -17,6 +18,7 @@ public class BouncyMushroom : MonoBehaviour
 
         // v = sqrt(2gh)  → 把竖直速度抬到目标值
         float vy = Mathf.Sqrt(2f * Physics.gravity.magnitude * Mathf.Max(0.01f, bounceHeight));
+        bounceSound.Play();
         if (rb.velocity.y < vy)
         {
             Vector3 v = rb.velocity;
