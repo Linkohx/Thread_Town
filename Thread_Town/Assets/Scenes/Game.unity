@@ -31601,6 +31601,11 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2749123492680844647, guid: d9095be00437b8049bb8d1a4fcc10d9f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d016aeebc87dde345beae9ec39f96294, type: 2}
     - target: {fileID: -1771216564546194796, guid: d9095be00437b8049bb8d1a4fcc10d9f,
         type: 3}
       propertyPath: m_BackGroundColor.a
