@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,13 +11,27 @@ public class VillageHead : MonoBehaviour
     [Header("NPC相关")]
     public NPCController[] npcControllers;
 
-    public bool npcState { protected set; get; }
+    [Header("视频界面")]
+    public VedioPanel vedioPanel;
+
+    public bool npcState
+    { protected set; get; }
 
     protected void Awake()
     {
         npcState = false;
         SetNPCState(npcState);
     }
+
+#if UNITY_EDITOR
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            vedioPanel.PlayVedio();
+        }
+    }
+#endif
 
     public void SetNPCState(bool state)
     {
@@ -31,7 +45,10 @@ public class VillageHead : MonoBehaviour
             npcState = CheckAllNPCState();
             if (npcState)
             {
-                GetComponent<DialogueTrigger>().dialogueID = finishedDialogueID;
+                DialogueTrigger dialogueTrigger = GetComponent<DialogueTrigger>();
+                dialogueTrigger.dialogueID = finishedDialogueID;
+                dialogueTrigger.dialogueEvent.RemoveAllListeners();
+                dialogueTrigger.dialogueEvent.AddListener(() => { vedioPanel.PlayVedio(); });
             }
             else
             {

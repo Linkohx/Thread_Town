@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// 对话触发者
@@ -22,6 +23,8 @@ public class DialogueTrigger : MonoBehaviour
     protected bool isCollisionPlayer = false;
 
     protected const string dialogueTip = "Press the G to initiate a conversation";
+
+    public UnityEvent dialogueEvent = new UnityEvent();
 
     protected void OnTriggerEnter(Collider other)
     {
@@ -54,7 +57,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             if (Input.GetKeyDown(dialogueKeyCode))
             {
-                DialogueManager.Instance.StartDialogue(dialogueID);
+                DialogueManager.Instance.StartDialogue(dialogueID, dialogueEvent);
                 isCollisionPlayer = false;
                 tipPanel.HideTip();
             }
